@@ -3,13 +3,14 @@ PImage image;
 
 
 void setup(){
-  size(403, 430);
+  size(403, 427);
   rectMode(CENTER);
-  image = loadImage("the wall.gif");
+  image = loadImage("thewall.gif");
 }
 
 void draw(){
   background(0);
+  fill(255, 255, 255);
   for (int i = 0; i < 20; i = i+1) {
     rect(0+i*80, 10, 80, 25);
     rect(-40+i*80, 35, 80, 25);
@@ -30,5 +31,7 @@ void draw(){
     rect(0+i*80, 410, 80, 25);
     rect(-40+i*80, 435, 80, 25);
   }
+  image(image, 0, 0);
+  fill(0, 0, 0,0);
   
-}  
+}
